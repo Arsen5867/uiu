@@ -1,0 +1,620 @@
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+  src: local('Bebas Neue'),
+    url('../fonts/BebasRegular.woff') format('woff'),
+    url('../fonts/BebasRegular.ttf') format('ttf'),
+    url('../fonts/BebasRegular.eot') format('eot');
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+	font-weight: bold;
+	font-display: swap;
+  src: local('Bebas Neue'),
+    url('../fonts/BebasBold.woff') format('woff'),
+    url('../fonts/BebasBold.ttf') format('ttf'),
+    url('../fonts/BebasBold.eot') format('eot');
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+  src: local('Bebas Neue'),
+    url('../fonts/BebasBook.woff') format('woff'),
+    url('../fonts/BebasBook.ttf') format('ttf'),
+    url('../fonts/BebasBook.eot') format('eot');
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+	font-weight: 200;
+	font-display: swap;
+  src: local('Bebas Neue'),
+    url('../fonts/BebasThin.woff') format('woff'),
+    url('../fonts/BebasThin.ttf') format('ttf'),
+    url('../fonts/BebasThin.eot') format('eot');
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+  src: local('FontAwesome'),
+    url('../fonts/fontawesome-webfont.woff') format('woff'),
+    url('../fonts/fontawesome-webfont.woff2') format('woff2'),
+    url('../fonts/fontawesome-webfont.ttf') format('ttf'),
+    url('../fonts/fontawesome-webfont.eot') format('eot');
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+html, body {
+	font-family: 'Bebas Neue', sans-serif !important; 
+	overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-weight: normal;
+	font-size: 16px;
+	color: #fff;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  text-decoration: none;
+  background:transparent;
+  }
+
+a img, :link img, :visited img {
+  border: none;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+ animation-duration: 0.01ms !important;
+ animation-iteration-count: 1 !important;
+ transition-duration: 0.01ms !important;
+ scroll-behavior: auto !important;
+  }
+}
+
+.text-1 {
+  color: #fff;
+}
+
+.text-2 {
+  color: #242735;
+}
+
+.bg-1 {
+  background-color: #323444;
+}
+
+.bg-2 {
+  background-color: #242735;
+}
+
+/* Header */
+
+.header {
+  letter-spacing: 1px;
+}
+
+.header__top {
+  padding: 25px 0 100px;
+  text-align: center;
+}
+
+.logo {
+  display: inline-block;
+  padding: 10px;
+}
+
+.logo__img {
+  width: 230px;
+} 
+
+.header__text-block {
+  font-family: 'Bebas Neue';
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.header__title {
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.header__decs {
+  font-weight: normal;
+  font-size: 40px;
+}
+
+.header__bottom {
+  text-align: center;
+  background: #242735;
+  padding: 20px 0;
+}
+
+.promotion-timer__title {
+  font-family: 'Bebas Neue';
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 50px;
+}
+
+.timer .timer__block {
+  width: 90px;
+  height: 80px;
+  padding: 5px;
+  font-size: 16px;
+  font-family: 'Bebas Neue';
+  font-weight: 300;
+  color: #666168;
+  letter-spacing: 0.5px;
+  border: 1px solid #A79C9C;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.timer .timer__block:first-child {
+  margin-left: 0;
+}
+
+.timer .timer__block > span {
+  display: block; 
+  font-weight: bold;
+  font-size: 60px;
+  color: #FFB800;
+  line-height: normal;
+  margin: 0 0 10px;
+}
+
+.btn-call { 
+	position: relative;
+	display: inline-block;
+	width: 426px;
+	max-width: 100%;
+  padding: 10px 50px 5px 50px;
+  text-decoration: none;
+  color: #FFB800;
+  font-size: 2.3em;
+  font-family: 'Bebas Neue';
+  font-weight: bold;
+  letter-spacing: 2px;
+  /* background-color: #FFB800; */
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1px solid #FFB800;
+  transition: all ease 0.5s;
+}
+
+.btn-call:before {
+	font-family: FontAwesome;
+	content: "\f095";
+	display: inline-block;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.btn-call:hover, .btn-call:active, .btn-call:focus {
+	color: #242735;
+	background-color: #FFB800;
+}
+
+/* End Header */
+
+/* Section connnect */
+
+.section {
+	padding: 20px 0;
+	color: #fff;
+	text-align: center;
+}
+
+.section__title {
+  text-align: center;
+  font-size: 36px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 28px;
+}
+
+.btn-connect-group {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-connect-group .btn-call {
+  text-align: center;
+  width: 426px;
+	max-width: 100%;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 300;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+.btn-connect-group .btn-call:hover, .btn-call:active {
+  color: #fff;
+  box-shadow: none;
+}
+
+.btn-vb {
+	background-color: #574E92;
+	border-color: #574E92;
+}
+.btn-vb:before {
+	content: "\f2a0";
+}
+
+.btn-vb:hover, .btn-vb:active, .btn-vb:visited {
+	background-color: rgba(87, 78, 146, 0.4);
+}
+.btn-wh {
+	background-color: #0FBC17;
+	border-color: #0FBC17;
+}
+
+.btn-wh:before {
+	content: "\f232";	
+}
+
+.btn-wh:hover, .btn-wh:active, .btn-wh:visited {
+	background-color: rgba(15, 188, 23, 0.4);
+}
+
+.btn-tg {
+	background-color: #2CA5E0;
+	border-color: #2CA5E0;
+}
+
+.btn-tg:before {
+	content: "\f2c6";	
+}
+
+.btn-tg:hover, .btn-tg:active, .btn-tg:visited {
+	background-color: rgba(44, 165, 224, 0.4);
+}
+
+/* End Section connnect */
+
+
+/* Section service */
+.service-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-content: space-evenly;
+	width: 80%;
+	margin: 0 auto;
+
+}
+
+.service-item	{	
+	flex: 0 0 29%;
+  margin: 20px 0;
+	background-color: #fff;
+	border-radius: 15px;
+	padding: 20px;
+}
+
+.service-item__img{
+	width: 180px;
+	height: 180px;
+  overflow: hidden;
+	border-radius: 50%;	
+	margin: 0 auto;
+	border: #FFB800 5px solid;
+}
+
+.service-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	
+}
+
+.service-title {
+	color: #242735;
+	font-size: 32px;
+	font-weight: bold;
+	padding: 45px 0 0;
+}
+/* End Section service */
+
+
+/* Section About */
+.about {
+	padding-bottom: 80px;
+}
+.text-about {
+	font-size: 26px;
+	font-weight: normal;
+	line-height: normal;
+	letter-spacing: 1px;
+	padding: 0 75px;
+}
+
+/* End Section About */
+
+/* Section Autopark */
+
+.autopark {
+	padding-bottom: 150px;
+}
+
+.autopark .section__title {
+	padding-bottom: 90px;
+}
+
+.autopark__detail {
+	text-align: left;
+	font-size: 32px;
+	letter-spacing: 1px;
+	font-weight: 300;
+	line-height: 1.4;
+	padding-left: 150px;
+}
+
+.autopark__img {
+	position: relative;
+	margin: 45px 0 0;
+}
+
+/* End Section Auto */
+
+/* Section Contacts */
+
+.contacts {
+	padding-bottom: 50px;
+}
+
+.contacts__adress {
+	font-size: 32px;
+	letter-spacing: 1px;
+	font-weight: 300;
+	padding-bottom: 50px;
+}
+
+#price{
+  color: #ffc107;
+  font-weight: 600;
+}
+
+#bruise{
+  color: #0dcaf0;
+}
+
+#bibika{
+    margin-top: 3%;
+    border-top: 2px solid #3542dc;
+}
+
+#retreat{
+	margin-top: 4%;
+}
+
+
+/* End Section Contacts */
+
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+	.service-wrap {
+		width: 100%;
+	}
+
+	.autopark__detail {
+		padding: 0;
+		font-size: 28px;
+	}
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+	.autopark {
+		padding-bottom: 50px;
+	}
+
+	.autopark .autopark__detail{
+		text-align: center;
+	}
+
+	.btn-call {
+		padding: 5px 25px 5px 25px;
+		font-size: 1.5em;
+	}
+
+	.timer .timer__block > span {
+		margin: 0 0 5px;
+	}
+
+	.text-about {
+		padding: 0;
+	}
+
+	.btn-connect-group .btn-call {
+		width: 100%;
+		font-size: 22px
+	}
+
+	.service-wrap .service-item {
+		flex: 1 0;
+	}
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+	.header__title {
+		font-size: 50px;
+	}
+
+	.header__decs {
+		font-size: 26px;
+	}
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+/* animated */
+
+.scale-down-center{-webkit-animation:scale-down-center .4s cubic-bezier(.25,.46,.45,.94) both;animation:scale-down-center .4s cubic-bezier(.25,.46,.45,.94) both}
+
+@-webkit-keyframes scale-down-center{0%{-webkit-transform:scale(1);transform:scale(1)}100%{-webkit-transform:scale(.5);transform:scale(.5)}}@keyframes scale-down-center{0%{-webkit-transform:scale(1);transform:scale(1)}100%{-webkit-transform:scale(.5);transform:scale(.5)}}
+
+.text-focus-in{-webkit-animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both;animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both}
+
+@-webkit-keyframes text-focus-in{0%{-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes text-focus-in{0%{-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}
